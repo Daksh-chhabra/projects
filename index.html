@@ -1,14 +1,116 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Projects</title>
-  </head>
-  <body>
-    <h1>Welcome to My Projects</h1>
-    <ul>
-      <li><a href="portfolio/index.html">Portfolio Website</a></li>
-      <li><a href="todo/index.html">To-Do List</a></li>
-      <li><a href="gallery/index.html">Gallery</a></li>
-    </ul>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daksh's Project Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 3rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p.sub {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      text-align: center;
+      backdrop-filter: blur(5px);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #00ffff;
+      font-weight: 600;
+      font-size: 1.2rem;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    footer {
+      margin-top: 3rem;
+      opacity: 0.5;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to Daksh's Projects</h1>
+  <p class="sub">Click below to check out my best frontend works</p>
+
+  <div class="projects">
+    <div class="card">
+      <a href="project/portfolio/index.html" target="_blank">Portfolio Website</a>
+      <p>Clean responsive site to showcase skills and contact info.</p>
+    </div>
+    <div class="card">
+      <a href="project/to do list/todo.html" target="_blank">To-Do List App</a>
+      <p>Minimal and functional app to manage daily tasks.</p>
+    </div>
+    <div class="card">
+      <a href="project/resume/resume.html" target="_blank">Image Gallery</a>
+      <p>Resume</p>
+    </div>
+    <div class="card">
+      <a href="project/landing page/landing.html" target="_blank">Landing Page Clone</a>
+      <p>Netflix-style landing page using HTML & CSS only.</p>
+    </div>
+    <div class="card">
+      <a href="project/quotes/quotes.html" target="_blank">Quote of the Day</a>
+      <p>Static quote generator styled with gradients and glow.</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Daksh | All rights reserved.
+  </footer>
+
+</body>
 </html>
+
