@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker — Neon Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input id="username" placeholder="Enter your name" />
+  <button onclick="saveName()">Save</button>
+  <p id="greeting"></p>
+
+  <script>
+    // Load stored data on page load
+    window.onload = function() {
+      const name = localStorage.getItem("name");
+      if (name) {
+        document.getElementById("greeting").innerText = "Welcome back, " + name;
+      }
+    };
+
+    // Save data to localStorage
+    function saveName() {
+      const input = document.getElementById("username").value;
+      localStorage.setItem("name", input);
+      document.getElementById("greeting").innerText = "Welcome, " + input;
+    }
+  </script>
+</body>
+    <div class="main-container">
+        <!-- Neon 3D Wallet SVG -->
+        <div class="hero-img">
+          <svg width="130" height="110" viewBox="0 0 130 110" fill="none">
+            <defs>
+              <radialGradient id="walletGlow" cx="65" cy="55" r="54" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#00ffe7" stop-opacity="1"/>
+                <stop offset="1" stop-color="#5a11ff" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <ellipse cx="65" cy="55" rx="54" ry="44" fill="url(#walletGlow)" />
+            <rect x="35" y="30" rx="12" width="60" height="38" fill="#181c2e" stroke="#00ffe7" stroke-width="3"/>
+            <circle cx="90" cy="55" r="8" fill="#00ffe7" stroke="#5a11ff" stroke-width="2"/>
+            <circle cx="55" cy="72" r="6" fill="#5a11ff" stroke="#00ffe7" stroke-width="1.5"/>
+            <text x="48" y="59" font-size="18" font-family="Inter, Arial" fill="#00ffe7">₿</text>
+          </svg>
+        </div>
+
+        <h1 class="neon-title">Expense Tracker</h1>
+        <div class="table-head glassy">
+            <div class="cell main"><span>Description</span></div>
+            <div class="cell main credit"><span>Credit</span></div>
+            <div class="cell main debit"><span>Debit</span></div>
+        </div>
+        <div class="table glassy"></div>
+        <div class="buttons">
+            <button class="add"> + </button>
+            <button class="remove"> X </button>
+        </div>
+        <div class="final-report">
+            <button class="report income credit-col">Total Income</button>
+            <button class="report balance balance-col">Balance</button>
+            <button class="report debit debit-col">Total Expenses</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

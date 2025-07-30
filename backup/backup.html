@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker </title>
+    <link rel="stylesheet" href="backup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1> Expense Tracker</h1>
+    <div class="hero-img">
+  <svg width="140" height="120" viewBox="0 0 140 120" fill="none">
+    <defs>
+      <radialGradient id="walletGlow" cx="70" cy="60" r="60" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#00ffe7" stop-opacity="0.8"/>
+        <stop offset="1" stop-color="#5a11ff" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <ellipse cx="70" cy="60" rx="60" ry="48" fill="url(#walletGlow)" />
+    <rect x="45" y="40" rx="14" width="50" height="40" fill="#172132" stroke="#00ffe7" stroke-width="3" filter="url(#glow)" />
+    <circle cx="100" cy="60" r="8" fill="#00ffe7" stroke="#5a11ff" stroke-width="2"/>
+    <circle cx="62" cy="72" r="6" fill="#5a11ff" stroke="#00ffe7" stroke-width="1.5"/>
+    <circle cx="88" cy="55" r="4" fill="#00ffe7" stroke="#5a11ff" stroke-width="1"/>
+    <!-- Add more neon coins or shapes for depth -->
+  </svg>
+</div>
+    <div class="table-head">
+        <div class="cell main"><h1>Description</h1></div>
+        <div class="cell main credit"><h1>Credit</h1></div>
+        <div class="cell main expensive"><h1>Debit</h1></div>
+    </div>
+    <div class="table ">
+
+    </div>
+    <div class="buttons">
+        <button class="add"> +</button>
+        <BUTTON class="remove"> X</BUTTON>
+        </div>
+        <div class="final-report">
+           <button class="report income credit-col">Total Income</button>
+            <button class="report balance balance-col">Balance</button>
+            <button class="report debit debit-col">Total Expenses</button>
+            
+        </div>
+
+
+
+
+    <script src="backup.js"></script>
+</body>
+</html>

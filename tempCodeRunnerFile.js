@@ -1,0 +1,1 @@
+div.innerHTML = `<h2 class="editable" style="color:var(--color-debit);">'0'</h2>`;
